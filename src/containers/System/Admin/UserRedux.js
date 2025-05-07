@@ -7,7 +7,8 @@ import { LANGUAGES } from '../../../utils';
 import * as actions from '../../../store/actions';
 import './UserRedux.scss';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import TableManageUser from './TableManageUser';
 
 class UserRedux extends Component {
     constructor(props) {
@@ -69,6 +70,22 @@ class UserRedux extends Component {
                 position: arrPositions && arrPositions.length > 0 ? arrPositions[0].key : '',
             })
         }
+
+        if (prevProps.listUsers !== this.props.listUsers) {
+            this.setState({
+                email: '',
+                password: '',
+                firstName: '',
+                lastName: '',
+                address: '',
+                phoneNumber: '',
+                gender: '',
+                position: '',
+                role: '',
+                image: '',
+            })
+        }
+
     }
 
     handleOnchangeImage = (event) => {
@@ -95,6 +112,11 @@ class UserRedux extends Component {
     handleSaveUser = () => {
         let isValid = this.checkValidateInput();
         if (isValid === false) return;
+
+        this.setState({
+            ...this.state,
+            isUserCreated: false
+        })
 
         //fire redux action
         this.props.createNewUser({
@@ -262,10 +284,14 @@ class UserRedux extends Component {
 
                                 </div>
                             </div>
-                            <div className="col-12 mt-3">
+                            <div className="col-12 my-3">
                                 <button className="btn btn-primary"
                                     onClick={() => this.handleSaveUser()}
                                 ><FormattedMessage id="manage-user.save" /></button>
+                            </div>
+
+                            <div className="col-12 mb-5">
+                                <TableManageUser />
                             </div>
                         </div>
                     </div>
@@ -291,6 +317,7 @@ const mapStateToProps = state => {
         roleRedux: state.admin.roles,
         positionRedux: state.admin.positions,
         isLoadingGender: state.admin.isLoadingGender,
+        listUsers: state.admin.users,
     };
 };
 
@@ -300,6 +327,7 @@ const mapDispatchToProps = dispatch => {
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleStart: () => dispatch(actions.fetchRoleStart()),
         createNewUser: (data) => dispatch(actions.createNewUser(data)),
+        fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
 
         // processLogout: () => dispatch(actions.processLogout()),  
         // changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language)),
