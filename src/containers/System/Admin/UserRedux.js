@@ -222,7 +222,7 @@ class UserRedux extends Component {
         return (
             <div className="user-redux-container">
                 <div className="title">
-                    Learn React-Redux Duy7ham
+                    Learn React-Redux DuyPham27
                 </div>
                 <div className="user-redux-body" >
                     <div className="container">

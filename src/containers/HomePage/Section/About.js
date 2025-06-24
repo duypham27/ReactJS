@@ -10,15 +10,15 @@ class About extends Component {
         return (
             <div className="section-share section-about">
                 <div className="section-about-header">
-                    Truyền thông nói gì về Channel Duy7ham
+                    Truyền thông nói gì về ANTV - Truyền hình Công an Nhân dân
+
                 </div>
                 <div className="section-about-content">
                     <div className="content-left">
-                        <iframe width="100%" height="400px"
-                            src="https://www.youtube.com/embed/HUxly_9N_9w"
-                            title="YouTube video player" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-
+                        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/iBbgr46xQTU?list=PLF3UjIBiVGVD9NwwXQ-5_NPKfAjEIiRCY"
+                            title="Vụ siết cổ chấn động Lạng Sơn, lính hình sự rùng mình tại hiện trường | Hành trình phá án | ANTV"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div className="content-right">
                         <p>
