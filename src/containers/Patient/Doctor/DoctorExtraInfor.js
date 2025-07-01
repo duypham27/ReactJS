@@ -5,7 +5,7 @@ import { LANGUAGES } from '../../../utils';
 import { getExtraInforDoctorById } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
 import NumberFormat from 'react-number-format';
-import { lang } from 'moment';
+
 
 class DoctorExtraInfor extends Component {
 
@@ -72,7 +72,6 @@ class DoctorExtraInfor extends Component {
                                     displayType={'text'}
                                     thousandSeparator={true}
                                     suffix={'VND'}
-
                                 />
                             }
                             {extraInfor && extraInfor.priceTypeData
@@ -83,7 +82,6 @@ class DoctorExtraInfor extends Component {
                                     displayType={'text'}
                                     thousandSeparator={true}
                                     suffix={'$'}
-
                                 />
                             }
 

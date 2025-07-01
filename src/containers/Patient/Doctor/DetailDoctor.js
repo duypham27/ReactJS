@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import './DetailDoctor.scss';
 import { getDetailInforDoctor } from '../../../services/userService';
-import { lang } from 'moment';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
+
 class DetailDoctor extends Component {
 
     constructor(props) {
