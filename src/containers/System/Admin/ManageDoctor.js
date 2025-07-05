@@ -6,10 +6,9 @@ import * as actions from '../../../store/actions';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
+
 import './ManageDoctor.scss';
-// Initialize a markdown parser
 import Select from 'react-select';
-import { lang } from 'moment';
 import { CRUD_ACTIONS, LANGUAGES } from '../../../utils';
 import { getDetailInforDoctor } from '../../../services/userService';
 
