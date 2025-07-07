@@ -1,6 +1,6 @@
 {
     "homeheader": {
-        "speciality": "Chuyên khoa",
+        "specialty": "Chuyên khoa",
         "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
         "health-facility": "Cơ sở y tế",
         "select-room": "Chọn phòng khám",
@@ -106,7 +106,9 @@
             "province": "Tỉnh thành",
             "clinicName": "Tên phòng khám",
             "clinicAddress": "Địa chỉ phòng khám",
-            "note": "Ghi chú"
+            "note": "Ghi chú",
+            "specialty": "Chọn chuyên khoa",
+            "select-clinic": "Chọn phòng khám"
         }
     }
 }
