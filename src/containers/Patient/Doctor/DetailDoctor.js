@@ -20,14 +20,14 @@ class DetailDoctor extends Component {
     async componentDidMount() {
         if (this.props.match && this.props.match.params && this.props.match.params.id) {
             let id = this.props.match.params.id; // Get the doctor ID from the URL
-            let res = await getDetailInforDoctor(id);
             this.setState({
                 currentDoctorId: id
             })
+
+            let res = await getDetailInforDoctor(id);
             if (res && res.errCode === 0) {
                 this.setState({
                     detailDoctor: res.data,
-                    currentDoctorId: id,
                 });
             }
         }
