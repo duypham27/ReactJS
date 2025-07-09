@@ -10,7 +10,7 @@ import { LANGUAGES } from '../../../../utils';
 import Select from 'react-select';
 import { postPatientBookAppointment } from '../../../../services/userService';
 import { toast } from "react-toastify";
-import _ from 'lodash';
+import _, { flatMap } from 'lodash';
 import moment from 'moment';
 
 class BookingModal extends Component {
@@ -158,9 +158,6 @@ class BookingModal extends Component {
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId
         }
-
-        console.log('check dataTime: ', dataTime);
-
         return (
             <Modal
                 isOpen={isOpenModal}
@@ -188,6 +185,8 @@ class BookingModal extends Component {
                                 doctorId={doctorId}
                                 isShowDescriptionDoctor={false}
                                 dataTime={dataTime}
+                                isShowLinkDetail={false}
+                                isShowPrice={true}
                             />
                         </div>
                         <div className="row">
