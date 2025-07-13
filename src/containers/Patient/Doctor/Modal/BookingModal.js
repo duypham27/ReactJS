@@ -164,7 +164,7 @@ class BookingModal extends Component {
                 className={'booking-modal-container'}
                 size='lg'
                 centered
-                closeBookingModal
+            // closeBookingModal
             // backdrop={true}
             >
                 <div className="booking-modal-content">
